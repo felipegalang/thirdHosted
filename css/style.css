@@ -1,0 +1,154 @@
+body{
+    background-color: rgb(44, 9, 9);
+    margin: 0;
+    color: rgb(121, 17, 17);
+    font-family: 'Piazzolla', serif;
+}
+
+.header::after{
+    content: '';
+    height: 80vh;
+    width: 100%;
+    background-image: url(../img/solarcell.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transition: all 1000ms;
+}
+
+.header:hover::after{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.header:hover .header-content{
+    filter:blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.header-content{
+    padding: 0%;
+    color: rgb(22, 95, 4);
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 50px;
+    margin-left: -145px;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: all 700ms;
+    text-anchor: middle;
+}
+
+.header-content .logo {
+    height: 200px;
+    width: auto;
+}
+
+.title{
+    font-size: 2rem;
+    padding: 0px;
+}
+
+
+.title{
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    margin-bottom: 0%;
+}
+
+.text{
+    margin-top: 0%;
+}
+
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 2rem 0.5rem;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.text-center{
+    text-align: center;
+    margin: auto;
+}
+
+.bg-light{
+    background-color: black;
+}
+
+
+.services{
+    padding: 2rem;
+}
+
+.center{
+    padding: 5rem;
+}
+
+.footer{
+    padding: 0.5rem;    
+}
+
+.footer{
+    margin: 0%;
+}
+
+@media(max-width: 560px){
+    .header::after{
+        height: 50vh;
+    }
+
+    .header-content{
+        top: 10%;
+        margin-top: 5px;
+    }
+
+    .header-content .title{
+        font-size: 1.5rem;
+        text-align: center;   
+    }
+
+    .header-content .logo{
+        height: 120px;
+        width: auto;       
+    }
+
+    .header-content .text{
+        display: none;
+        text-align: center;
+    }
+
+    .grid-3, .grid-2{
+        grid-template-columns: 1fr;
+    }
+
+    .services{
+        padding: 1rem 1rem;
+    }
+
+    .center{
+        margin-top: 5px;
+        margin-bottom: 1px;
+    }
+
+}
+
+
